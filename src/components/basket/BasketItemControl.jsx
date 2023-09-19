@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 import { addQtyItem, minusQtyItem } from '@/redux/actions/basketActions';
 
 const BasketItemControl = ({ product }) => {
+  console.log(product)
   const dispatch = useDispatch();
 
   const onAddQty = () => {
@@ -53,8 +54,8 @@ BasketItemControl.propTypes = {
     keywords: PropType.arrayOf(PropType.string),
     selectedSize: PropType.string,
     selectedColor: PropType.string,
-    imageCollection: PropType.arrayOf(PropType.string),
-    sizes: PropType.arrayOf(PropType.number),
+    imageCollection: PropType.arrayOf(PropType.object),
+    sizes: PropType.arrayOf(PropType.string),
     image: PropType.string,
     imageUrl: PropType.string,
     isFeatured: PropType.bool,
